@@ -1,6 +1,7 @@
 import requests
 import json
 
+user_prompt= input("Enter the prompt")
 # API endpoint
 url = "https://ollama.com/api/chat"
 
@@ -14,7 +15,7 @@ headers = {
 payload = {
     "model": "gpt-oss:120b",
     "messages": [
-        {"role": "user", "content": "Hello"}
+        {"role": "user", "content": (user_prompt)}
     ],
     "stream": False
 }
